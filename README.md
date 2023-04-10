@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/23036697/230962872-d7dc37d6-3fe5-4746-a9ca-a3ca4dd7e062.png" alt="accessibility text">
-</p>
 
 ![Badge Linguagem](http://img.shields.io/static/v1?label=LINGUAGEM&message=SQL&color=informational&style=plastic)
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=yellowgreen&style=plastic)
