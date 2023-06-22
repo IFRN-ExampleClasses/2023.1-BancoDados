@@ -1,6 +1,6 @@
 -- ----------------------------------------------------------------------
 -- Criando o banco IFRN
-create database ifrn;
+--create database ifrn;
 
 -- ----------------------------------------------------------------------
 -- Criando o Schema ALUNOS
@@ -87,19 +87,19 @@ create table alunos.alunos (
 	
 	constraint pk_alunos primary key (matricula),
 	constraint fk_alunos_id_curso foreign key (id_curso) 						
-				references cursos (id_curso),
+				references alunos.cursos (id_curso),
 	constraint fk_alunos_id_situacao foreign key (id_situacao)
-				references situacoes (id_situacao),
+				references alunos.situacoes (id_situacao),
 	constraint fk_alunos_id_situacao_sistemica foreign key (id_situacao_sistemica)
-				references situacoes_sistemicas (id_situacao_sistemica),
+				references alunos.situacoes_sistemicas (id_situacao_sistemica),
 	constraint fk_alunos_id_linha_pesquisa foreign key (id_linha_pesquisa)
-				references linhas_pesquisa (id_linha_pesquisa),
+				references alunos.linhas_pesquisa (id_linha_pesquisa),
 	constraint fk_alunos_id_cota_mec foreign key (id_cota_mec)
-				references cotas_mec (id_cota_mec),
+				references alunos.cotas_mec (id_cota_mec),
 	constraint fk_alunos_id_cota_sistec foreign key (id_cota_sistec)
-				references cotas_sistec (id_cota_sistec),
+				references alunos.cotas_sistec (id_cota_sistec),
 	constraint fk_alunos_campus foreign key (campus) 
-				references campi (campus)	
+				references alunos.campi (campus)	
 );
 
 
