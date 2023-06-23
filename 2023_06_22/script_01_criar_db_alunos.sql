@@ -1,6 +1,6 @@
 -- ----------------------------------------------------------------------
 -- Criando o banco IFRN
---create database ifrn;
+create database ifrn;
 
 -- ----------------------------------------------------------------------
 -- Criando o Schema ALUNOS

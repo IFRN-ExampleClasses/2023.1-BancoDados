@@ -1,4 +1,4 @@
-# pip install psycopg2
+# pip install psycopg2 --user
 import psycopg2, sys
 
 # ------------------------------------------------------------
@@ -126,7 +126,7 @@ def insereSituacoes(descricao: str, conexao):
         idRetorno = cursorTable.fetchone()[0]
         conexao.commit()
     finally:
-        return inserido, idSituacao
+        return inserido, idRetorno
 
 # ------------------------------------------------------------
 def insereSituacoesSistemicas(descricao: str, conexao):
