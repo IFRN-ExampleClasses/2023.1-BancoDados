@@ -54,7 +54,6 @@ for campus in setCampi:
         print(retorno[1])
         continue
     dictCampus[campus] = retorno[1]
-print(dictCampus) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Inserindo os COTAS_MEC
@@ -67,7 +66,6 @@ for cotaMEC in setCotasMEC:
         print(retorno[1])
         continue
     dictCotasMEC[cotaMEC] = retorno[1]
-print(dictCotasMEC) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Inserindo os COTAS_SISTEC
@@ -80,7 +78,6 @@ for cotaSISTEC in setCotasSISTEC:
         print(retorno[1])
         continue
     dictCotasSISTEC[cotaSISTEC] = retorno[1]
-print(dictCotasSISTEC) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Inserindo os CURSOS
@@ -93,7 +90,6 @@ for curso in setCursos:
         print(retorno[1])
         continue
     dictCursos[curso] = retorno[1]
-print(dictCursos) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Inserindo os LINHAS_PESQUISA
@@ -106,7 +102,6 @@ for linhaPesquisa in setLinhasPesquisa:
         print(retorno[1])
         continue
     dictLinhasPesquisa[linhaPesquisa] = retorno[1]
-print(dictLinhasPesquisa) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Inserindo os SITUACOES
@@ -119,7 +114,6 @@ for situacao in setSituacoes:
         print(retorno[1])
         continue
     dictSituacoes[situacao] = retorno[1]
-print(dictSituacoes) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Inserindo os SITUACOES_SISTEMICAS
@@ -132,7 +126,6 @@ for situacaoSistemica in setSituacoesSistemicas:
         print(retorno[1])
         continue
     dictSituacoesSistemicas[situacaoSistemica] = retorno[1]
-print(dictSituacoesSistemicas) # TODO: PODE APAGAR DEPOIS
 
 # ------------------------------------------------------------
 # Fechando a conexão com o Database Server
