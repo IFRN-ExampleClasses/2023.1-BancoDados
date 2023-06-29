@@ -35,7 +35,8 @@ def estruturaDB(conexao):
             retornoFields = listaCampos(tabela[0], conexao)
             dictEstrutura[tabela[0]] = { 'schema'     : tabela[1],
                                          'primary_key': retornoPKS[1],
-                                         'campos'     : retornoFields[1] }
+                                         'campos'     : retornoFields[1],
+                                         'tipos'      : retornoFields[2] }
     finally:
         return boolSucesso, dictEstrutura
 
@@ -71,7 +72,8 @@ def listaPK(nomeTabela: str, conexao):
 def listaCampos(nomeTabela: str, conexao):
     boolSucesso        = False
     lstNomeCampos      = list()
-    strSQLNomeCampos   = 'SELECT column_name '
+    lstTipoCampos      = list()
+    strSQLNomeCampos   = 'SELECT columns.column_name, columns.data_type '
     strSQLNomeCampos  += 'FROM information_schema.columns '
     strSQLNomeCampos  += 'WHERE table_schema NOT IN (\'pg_catalog\', \'information_schema\') '
     strSQLNomeCampos  += f'AND table_name = \'{nomeTabela}\' '
@@ -85,8 +87,8 @@ def listaCampos(nomeTabela: str, conexao):
         boolSucesso = True
         lstCampos   = cursorFields.fetchall()
         for campos in lstCampos:
-            for campo in campos:
-                lstNomeCampos.append(campo)
+            lstNomeCampos.append(campos[0])
+            lstTipoCampos.append(campos[1])
     finally:
-        return boolSucesso, lstNomeCampos
+        return boolSucesso, lstNomeCampos, lstTipoCampos
         
